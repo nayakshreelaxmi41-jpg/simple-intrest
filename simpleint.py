@@ -1,9 +1,11 @@
-def simple_interest(p, r, t):
-    return (p * r * t) / 100
+import sys
+
+def simInt(principal, interest, time):
+    return (principal * interest * time) / 100
 
 if __name__ == "__main__":
-    p = float(input("Enter principal amount: "))
-    r = float(input("Enter rate of interest: "))
-    t = float(input("Enter time: "))
+    p = int(sys.argv[1])
+    i = int(sys.argv[2])
+    t = int(sys.argv[3])
 
-    print("Simple Interest is: ", simple_interest(p, r, t))
+    print("Simple interest: ", simInt(p, i, t))
